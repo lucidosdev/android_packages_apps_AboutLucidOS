@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Members" >
+
+    <TextView
+        android:id="@+id/member_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20.0dip"
+        android:text="@string/member_1" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/member_1"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            
+               <TextView
+                   android:id="@+id/member_lee"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/member_lee" />
+                
+               <TextView
+                   android:id="@+id/member_lee_info"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/member_lee"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/member_lee_info" />
+
+               <ImageView
+                   android:id="@+id/photo_lee"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/member_lee_info"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="5dp"
+                   android:src="@drawable/photo_lee" />
+
+               <Button
+                   android:id="@+id/likelee"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/photo_lee"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="5dp"
+                   android:background="#00000000"
+                   android:text="@string/like_develop" />
+       
+               <TextView
+                   android:id="@+id/member_jeon"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/likelee"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="20dp"
+                   android:text="@string/member_jeon" />
+               
+               <TextView
+                   android:id="@+id/member_jeon_info"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/member_jeon"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/member_jeon_info" />
+
+               <ImageView
+                   android:id="@+id/photo_jeon"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/member_jeon_info"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="5dp"
+                   android:src="@drawable/photo_jeon" />
+               
+               <Button
+                   android:id="@+id/likejeon"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/photo_jeon"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="5dp"
+                   android:background="#00000000"
+                   android:text="@string/like_develop" />
+            
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

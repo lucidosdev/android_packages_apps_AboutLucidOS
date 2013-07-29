@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App imformation -->
+    <string name="app_name">About LucidOS</string>
+    <string name="kill_app">Press again to exit</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- test -->
+    <string name="test">Test</string>
+    
+    <!-- App title -->
+    <string name="title_section1">About</string>
+    <string name="title_section2">ChangeLog</string>
+    <string name="title_section3">Members</string>
+    
+    <!-- ah... -->
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Welcome or about string -->
+    <string name="Welcome_1">Welcome To LucidOS</string>
+    <string name="construction">Construction Zone!!!\nThanks!!</string>
+    
+    <!-- changelog string -->
+    <string name="log_1">LucidOS ChangeLog List</string>
+    <string name="log_2">I can not check the LucidOS logs\nHave you clear the log file?\nIf not, you are not LucidOS!\n\nLucidOS will always be together\nPlease look forward to the first release of LucidOS!</string>
+    
+    <!-- members string -->
+    <string name="member_1">Member List</string>
+    <string name="member_lee">1. JoneHwan, Lee</string>
+    <string name="member_lee_info">Builder\nLucidOS Source\nInformation management</string>
+    <string name="member_jeon">2. yujin, jeon</string>
+    <string name="member_jeon_info">Build Bot\nBuild Bot\nBuild Bot\nBuild Bot\n</string>
+    
+    <string name="like_develop">Do you Like This Person?</string>
+
+</resources>
