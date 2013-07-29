@@ -11,6 +11,11 @@
     <string name="title_section2">변경사항</string>
     <string name="title_section3">맴버</string>
     
+    <!-- Option Menu -->
+    <string name="button_1">About LucidOS Team</string>
+    <string name="button_2">히든모드에 진입하셨습니다!\n히든모드는 현재 준비중 입니다</string>
+    <string name="about_lucidos">LucidOS를 사용해 주셔서 감사합니다!</string>
+    
     <!-- 아... -->
     <string name="hello_world">Hello world!</string>
     

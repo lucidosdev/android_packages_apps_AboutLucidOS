@@ -5,6 +5,8 @@ import java.util.Locale;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,6 +16,7 @@ import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -41,6 +44,11 @@ public class MainActivity extends FragmentActivity implements
 	 * The Kill is process kill button
 	 */
 	int kill=0;
+	
+	/**
+	 * Hidden Mode
+	 */
+	int hidden=0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +97,30 @@ public class MainActivity extends FragmentActivity implements
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch(item.getItemId()) {
+		case R.id.about_lucidos:
+			Toast.makeText(this, R.string.about_lucidos,Toast.LENGTH_LONG).show();
+	    	Uri uri = Uri.parse("http://lucidos.tistory.com");
+	    	Intent it  = new Intent(Intent.ACTION_VIEW,uri);
+	    	startActivity(it);
+			break;
+		case R.id.hidden:
+			hidden++;
+			if(hidden == 10){
+				hidden=0;
+				Toast.makeText(this, R.string.button_2,Toast.LENGTH_LONG).show();
+			    Intent myintent = new Intent(this, Hidden.class);
+			    startActivity(myintent);
+			}
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
 	@Override
 	public void onTabSelected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
@@ -189,7 +220,7 @@ public class MainActivity extends FragmentActivity implements
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
             // do something on back.
          kill++;
-         Toast.makeText(getBaseContext(), "한번더 누르시면 어플이 종료 됩니다.", Toast.LENGTH_SHORT).show();
+         Toast.makeText(getBaseContext(), R.string.kill_app, Toast.LENGTH_SHORT).show();
          if(kill == 2){
         	 kill=0;
             moveTaskToBack(true);
