@@ -12,12 +12,11 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:screenOrientation="portrait"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.lucidos.aboutlucidos.SplashActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,27 +26,29 @@
         </activity>
         <activity
             android:name="com.lucidos.aboutlucidos.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name="com.lucidos.aboutlucidos.About"
-            android:label="@string/title_section1"
-            android:screenOrientation="portrait" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_section1" >
         </activity>
         <activity
             android:name="com.lucidos.aboutlucidos.ChangeLog"
-            android:label="@string/title_section2"
-            android:screenOrientation="portrait" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_section2">
         </activity>
         <activity
             android:name="com.lucidos.aboutlucidos.Members"
-            android:label="@string/title_section3"
-            android:screenOrientation="portrait" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_section3">
         </activity>
         <activity
             android:name="com.lucidos.aboutlucidos.Hidden"
-            android:label="@string/title_activity_hidden" >
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_hidden">
         </activity>
     </application>
 

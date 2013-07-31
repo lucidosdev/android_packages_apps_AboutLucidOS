@@ -37,6 +37,10 @@
     <string name="member_jeon">2. yujin, jeon</string>
     <string name="member_jeon_info">Build Bot\nBuild Bot\nBuild Bot\nBuild Bot\n</string>
     <string name="like_develop">Do you Like This Person?</string>
+    
+    <!-- Hidden Mode -->
     <string name="title_activity_hidden">Hidden Mode</string>
+    <string name="hidden_1">Hello~ This is Hidden Mode!\nPlease listen a song~</string>
+    <string name="hidden_2">Can not exit HaHa(?)</string>
 
 </resources>

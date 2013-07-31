@@ -23,7 +23,7 @@ public class SplashActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.splashactivity);
 		splashLayout = (LinearLayout) findViewById(R.id.layout);
-		splashSceneNumber = 1;
+		splashSceneNumber = 2;
 		isClick = true;
 		mHandler = new Handler() {
 			@Override

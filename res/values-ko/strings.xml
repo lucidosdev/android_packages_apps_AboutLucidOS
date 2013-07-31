@@ -33,7 +33,10 @@
     <string name="member_lee_info">빌더\nLucidOS 소스관리\n팀내 모든 정보 관리</string>
     <string name="member_jeon">2. 전유진</string>
     <string name="member_jeon_info">빌드봇\n빌드봇\n빌드봇\n빌드봇\n</string>
-    
     <string name="like_develop">이 개발자가 마음에 드나요?</string>
-
+    
+    <!-- Hidden Mode -->
+    <string name="hidden_1">이곳은 히든모드입니다~\n잠시 노래 감상 하시죠 ㅎㅎ</string>
+    <string name="hidden_2">나가실수 없습니다 하하</string>
+    
 </resources>

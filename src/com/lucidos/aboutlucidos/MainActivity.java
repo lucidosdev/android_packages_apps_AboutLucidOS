@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,12 +15,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity implements
@@ -62,7 +59,7 @@ public class MainActivity extends FragmentActivity implements
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
 		mSectionsPagerAdapter = new SectionsPagerAdapter(
-				getSupportFragmentManager());
+				getApplicationContext(), getSupportFragmentManager());
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -100,21 +97,18 @@ public class MainActivity extends FragmentActivity implements
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		
 		switch(item.getItemId()) {
 		case R.id.about_lucidos:
 			Toast.makeText(this, R.string.about_lucidos,Toast.LENGTH_LONG).show();
-	    	Uri uri = Uri.parse("http://lucidos.tistory.com");
-	    	Intent it  = new Intent(Intent.ACTION_VIEW,uri);
-	    	startActivity(it);
+	    	Intent myintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://lucidos.tistory.com"));
+	    	startActivity(myintent);
 			break;
 		case R.id.hidden:
-			hidden++;
-			if(hidden == 10){
+			if(++hidden == 10){
 				hidden=0;
 				Toast.makeText(this, R.string.button_2,Toast.LENGTH_LONG).show();
-			    Intent myintent = new Intent(this, Hidden.class);
-			    startActivity(myintent);
+			    Intent Mirs = new Intent(this, Hidden.class);
+			    startActivity(Mirs);
 			}
 			break;
 		}
@@ -146,8 +140,9 @@ public class MainActivity extends FragmentActivity implements
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		Context mContext;
 
-		public SectionsPagerAdapter(FragmentManager fm) {
+		public SectionsPagerAdapter(Context context, FragmentManager fm) {
 			super(fm);
+			mContext = context;
 		}
 
 		@Override
@@ -187,15 +182,18 @@ public class MainActivity extends FragmentActivity implements
 		}
 	}
 
+	/*
+	
 	/**
 	 * A dummy fragment representing a section of the app, but that simply
 	 * displays dummy text.
-	 */
+	 */ /*
 	public static class DummySectionFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
 		 */
+		/*
 		public static final String ARG_SECTION_NUMBER = "section_number";
 
 		public DummySectionFragment() {
@@ -212,7 +210,7 @@ public class MainActivity extends FragmentActivity implements
 					ARG_SECTION_NUMBER)));
 			return rootView;
 		}
-	}
+	} */
 	
 	@Override
     public boolean onKeyDown(int keyCode, KeyEvent event)  {
@@ -232,6 +230,13 @@ public class MainActivity extends FragmentActivity implements
 
         return super.onKeyDown(keyCode, event);
     }
+	
+	public void onConfigurationChanged(Configuration newConfig){
+		// TODO Auto-generated method stub
+		
+		super.onConfigurationChanged(newConfig);
+		
+	}
 
 }
 
